@@ -35,7 +35,7 @@ public class PlatformImage {
 	private String projectGeneratorID;
 	private String projectBuilderID;
 	
-	PlatformImage(IConfigurationElement configurationElement) {
+	public PlatformImage(IConfigurationElement configurationElement) {
 		String iconPath = configurationElement.getAttribute(ATTR_ICON);
 		icon= HybridUI.getImageDescriptor(configurationElement.getContributor().getName(), iconPath);
 		projectGeneratorID = configurationElement.getAttribute(ATTR_PLATFORM_SUPPORT);

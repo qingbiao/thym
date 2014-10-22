@@ -311,7 +311,8 @@ public class CordovaPluginSelectionPage extends WizardPage {
 								@SuppressWarnings("restriction")
 								@Override
 								public void run() {
-									if(!getControl().isDisposed() && isCurrentPage()){
+//									if(!getControl().isDisposed() && isCurrentPage()){
+									if(!getControl().isDisposed()){
 										catalogViewer.getViewer().setInput(pluginInfos);
 									}
 								}

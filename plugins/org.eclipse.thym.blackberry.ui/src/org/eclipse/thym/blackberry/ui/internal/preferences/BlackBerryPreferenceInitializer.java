@@ -8,17 +8,17 @@
  * 	Contributors:
  * 		 Red Hat Inc. - initial API and implementation and/or initial documentation
  *******************************************************************************/
-package org.eclipse.thym.ui.internal.preferences;
+package org.eclipse.thym.blackberry.ui.internal.preferences;
 
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
-import org.eclipse.thym.core.platform.PlatformConstants;
+import org.eclipse.thym.blackberry.core.BlackBerryConstants;
 import org.eclipse.thym.ui.HybridUI;
 
 /**
  * Class used to initialize default preference values.
  */
-public class PreferenceInitializer extends AbstractPreferenceInitializer {
+public class BlackBerryPreferenceInitializer extends AbstractPreferenceInitializer {
 
 	/*
 	 * (non-Javadoc)
@@ -26,8 +26,9 @@ public class PreferenceInitializer extends AbstractPreferenceInitializer {
 	 * @see org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer#initializeDefaultPreferences()
 	 */
 	public void initializeDefaultPreferences() {
-		HybridUI.getDefault().getPreferenceStore().setDefault(PlatformConstants.PREF_SHRINKWRAP_PLUGIN_VERSIONS, false);
-        HybridUI.getDefault().getPreferenceStore().setDefault(PlatformConstants.PREF_DEFAULT_ENGINE, "cordova:3.5.0");
+		IPreferenceStore store = HybridUI.getDefault().getPreferenceStore();
+		store.setDefault(BlackBerryConstants.PREF_BLACKBERRY_SDK_LOCATION,
+				"");
 	}
 
 }

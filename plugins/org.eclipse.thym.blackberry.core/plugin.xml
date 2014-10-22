@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.debug.core.launchConfigurationTypes">
+      <launchConfigurationType
+            delegate="org.eclipse.thym.blackberry.core.bdt.BlackBerryLaunchDelegate"
+            id="org.eclipse.thym.blackberry.core.BlackBerryLaunchConfigurationType"
+            modes="run"
+            name="BlackBerry Emulator">
+      </launchConfigurationType>
+   </extension>
+   <extension
+         point="org.eclipse.thym.core.platformSupport">
+      <platform
+            projectGenerator="org.eclipse.thym.blackberry.core.bdt.BlackBerryProjectGenerator"
+            id="org.eclipse.thym.blackberry.core.platformSupport"
+            platform="BlackBerry"
+            platformID="blackberry"
+            pluginInstallActionFactory="org.eclipse.thym.blackberry.core.bdt.BlackBerryPluginInstallationActionsFactory"
+            libraryResolver="org.eclipse.thym.blackberry.core.bdt.BlackBerryLibraryResolver">
+      </platform>
+   </extension>
+   <extension
+         point="org.eclipse.thym.core.projectBuilder">
+      <builder
+            delegate="org.eclipse.thym.blackberry.core.bdt.BuildDelegate"
+            id="org.eclipse.thym.blackberry.core.projectBuilder"
+            platform="BlackBerry">
+      </builder>
+   </extension>
+
+</plugin>
